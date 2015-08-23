@@ -20,6 +20,45 @@ using ITerminalNode = Antlr4.Runtime.Tree.ITerminalNode;
 [System.CLSCompliant(false)]
 public partial class PoeFilterBaseListener : IPoeFilterListener {
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStrValue([NotNull] PoeFilterParser.StrValueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStrValue([NotNull] PoeFilterParser.StrValueContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSocketValue([NotNull] PoeFilterParser.SocketValueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSocketValue([NotNull] PoeFilterParser.SocketValueContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.visibility"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -370,4 +409,4 @@ public partial class PoeFilterBaseListener : IPoeFilterListener {
 	/// <remarks>The default implementation does nothing.</remarks>
 	public virtual void VisitErrorNode([NotNull] IErrorNode node) { }
 }
-} // namespace ConsoleApplication1
+} // namespace PoeFilterParser

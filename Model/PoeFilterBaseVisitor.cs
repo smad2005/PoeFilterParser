@@ -18,6 +18,39 @@ namespace PoeFilterParser.Model {
 [System.CLSCompliant(false)]
 public partial class PoeFilterBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IPoeFilterVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitStrValue([NotNull] PoeFilterParser.StrValueContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitSocketValue([NotNull] PoeFilterParser.SocketValueContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context) { return VisitChildren(context); }
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="PoeFilterParser.visibility"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -303,4 +336,4 @@ public partial class PoeFilterBaseVisitor<Result> : AbstractParseTreeVisitor<Res
 	/// <return>The visitor result.</return>
 	public virtual Result VisitMain([NotNull] PoeFilterParser.MainContext context) { return VisitChildren(context); }
 }
-} // namespace ConsoleApplication1
+} // namespace PoeFilterParser

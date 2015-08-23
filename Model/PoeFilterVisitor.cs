@@ -17,6 +17,27 @@ namespace PoeFilterParser.Model {
 [System.CLSCompliant(false)]
 public interface IPoeFilterVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStrValue([NotNull] PoeFilterParser.StrValueContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSocketValue([NotNull] PoeFilterParser.SocketValueContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="PoeFilterParser.visibility"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -198,4 +219,4 @@ public interface IPoeFilterVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitMain([NotNull] PoeFilterParser.MainContext context);
 }
-} // namespace ConsoleApplication1
+} // namespace PoeFilterParser

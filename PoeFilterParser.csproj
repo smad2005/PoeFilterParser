@@ -65,11 +65,11 @@
   <ItemGroup>
     <AntlrTokens Include="Model\PoeFilter.tokens">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>ConsoleApplication1.Model</CustomToolNamespace>
+      <CustomToolNamespace>PoeFilterParser.Model</CustomToolNamespace>
     </AntlrTokens>
     <AntlrTokens Include="Model\PoeFilterLexer.tokens">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>ConsoleApplication1.Model</CustomToolNamespace>
+      <CustomToolNamespace>PoeFilterParser.Model</CustomToolNamespace>
     </AntlrTokens>
     <None Include="app.config" />
     <None Include="packages.config">

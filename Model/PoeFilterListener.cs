@@ -17,6 +17,39 @@ namespace PoeFilterParser.Model {
 [System.CLSCompliant(false)]
 public interface IPoeFilterListener : IParseTreeListener {
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStrValue([NotNull] PoeFilterParser.StrValueContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.strValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStrValue([NotNull] PoeFilterParser.StrValueContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSocketValue([NotNull] PoeFilterParser.SocketValueContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.socketValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSocketValue([NotNull] PoeFilterParser.SocketValueContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitCompareOpNullable([NotNull] PoeFilterParser.CompareOpNullableContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.visibility"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -302,4 +335,4 @@ public interface IPoeFilterListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitMain([NotNull] PoeFilterParser.MainContext context);
 }
-} // namespace ConsoleApplication1
+} // namespace PoeFilterParser

@@ -39,6 +39,17 @@ public interface IPoeFilterListener : IParseTreeListener {
 	void ExitSocketValue([NotNull] PoeFilterParser.SocketValueContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.rarityValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRarityValue([NotNull] PoeFilterParser.RarityValueContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.rarityValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRarityValue([NotNull] PoeFilterParser.RarityValueContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -70,6 +81,39 @@ public interface IPoeFilterListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitParams([NotNull] PoeFilterParser.ParamsContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.digitsParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDigitsParams([NotNull] PoeFilterParser.DigitsParamsContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.digitsParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDigitsParams([NotNull] PoeFilterParser.DigitsParamsContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.rariryParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterRariryParams([NotNull] PoeFilterParser.RariryParamsContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.rariryParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitRariryParams([NotNull] PoeFilterParser.RariryParamsContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.socketParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterSocketParams([NotNull] PoeFilterParser.SocketParamsContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.socketParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitSocketParams([NotNull] PoeFilterParser.SocketParamsContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.red"/>.

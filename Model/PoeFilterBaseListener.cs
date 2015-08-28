@@ -46,6 +46,19 @@ public partial class PoeFilterBaseListener : IPoeFilterListener {
 	public virtual void ExitSocketValue([NotNull] PoeFilterParser.SocketValueContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.rarityValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRarityValue([NotNull] PoeFilterParser.RarityValueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.rarityValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRarityValue([NotNull] PoeFilterParser.RarityValueContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -83,6 +96,45 @@ public partial class PoeFilterBaseListener : IPoeFilterListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitParams([NotNull] PoeFilterParser.ParamsContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.digitsParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDigitsParams([NotNull] PoeFilterParser.DigitsParamsContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.digitsParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDigitsParams([NotNull] PoeFilterParser.DigitsParamsContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.rariryParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterRariryParams([NotNull] PoeFilterParser.RariryParamsContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.rariryParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitRariryParams([NotNull] PoeFilterParser.RariryParamsContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.socketParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterSocketParams([NotNull] PoeFilterParser.SocketParamsContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.socketParams"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitSocketParams([NotNull] PoeFilterParser.SocketParamsContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.red"/>.

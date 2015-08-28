@@ -31,6 +31,13 @@ public interface IPoeFilterVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitSocketValue([NotNull] PoeFilterParser.SocketValueContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.rarityValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRarityValue([NotNull] PoeFilterParser.RarityValueContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="PoeFilterParser.compareOpNullable"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -50,6 +57,27 @@ public interface IPoeFilterVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitParams([NotNull] PoeFilterParser.ParamsContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.digitsParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDigitsParams([NotNull] PoeFilterParser.DigitsParamsContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.rariryParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitRariryParams([NotNull] PoeFilterParser.RariryParamsContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.socketParams"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSocketParams([NotNull] PoeFilterParser.SocketParamsContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="PoeFilterParser.red"/>.

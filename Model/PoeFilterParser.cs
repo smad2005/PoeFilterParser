@@ -24,18 +24,19 @@ public partial class PoeFilterParser : Parser {
 		RULE_socketParams = 8, RULE_red = 9, RULE_green = 10, RULE_blue = 11, 
 		RULE_alpha = 12, RULE_color = 13, RULE_poeClass = 14, RULE_poeBaseType = 15, 
 		RULE_poeFontSize = 16, RULE_poeTextColor = 17, RULE_poeBackgroundColor = 18, 
-		RULE_poeBorderColor = 19, RULE_poeAlertSound = 20, RULE_poeRarity = 21, 
-		RULE_poeSocketGroup = 22, RULE_poeLinkedSockets = 23, RULE_poeSockets = 24, 
-		RULE_poeItemLevel = 25, RULE_poeDropLevel = 26, RULE_poeQuality = 27, 
-		RULE_poeWidth = 28, RULE_poeHeight = 29, RULE_statement = 30, RULE_block = 31, 
-		RULE_main = 32;
+		RULE_poeBorderColor = 19, RULE_id = 20, RULE_volume = 21, RULE_poeAlertSound = 22, 
+		RULE_poeRarity = 23, RULE_poeSocketGroup = 24, RULE_poeLinkedSockets = 25, 
+		RULE_poeSockets = 26, RULE_poeItemLevel = 27, RULE_poeDropLevel = 28, 
+		RULE_poeQuality = 29, RULE_poeWidth = 30, RULE_poeHeight = 31, RULE_statement = 32, 
+		RULE_block = 33, RULE_main = 34;
 	public static readonly string[] ruleNames = {
 		"strValue", "socketValue", "rarityValue", "compareOpNullable", "visibility", 
 		"params", "digitsParams", "rariryParams", "socketParams", "red", "green", 
 		"blue", "alpha", "color", "poeClass", "poeBaseType", "poeFontSize", "poeTextColor", 
-		"poeBackgroundColor", "poeBorderColor", "poeAlertSound", "poeRarity", 
-		"poeSocketGroup", "poeLinkedSockets", "poeSockets", "poeItemLevel", "poeDropLevel", 
-		"poeQuality", "poeWidth", "poeHeight", "statement", "block", "main"
+		"poeBackgroundColor", "poeBorderColor", "id", "volume", "poeAlertSound", 
+		"poeRarity", "poeSocketGroup", "poeLinkedSockets", "poeSockets", "poeItemLevel", 
+		"poeDropLevel", "poeQuality", "poeWidth", "poeHeight", "statement", "block", 
+		"main"
 	};
 
 	private static readonly string[] _LiteralNames = {
@@ -131,7 +132,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 66;
+			State = 70;
 			_la = _input.La(1);
 			if ( !(_la==STR || _la==QUOTESTR) ) {
 			_errHandler.RecoverInline(this);
@@ -182,7 +183,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 68;
+			State = 72;
 			_la = _input.La(1);
 			if ( !(_la==SOCKET || _la==QUOTESOCKET) ) {
 			_errHandler.RecoverInline(this);
@@ -233,7 +234,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 70;
+			State = 74;
 			_la = _input.La(1);
 			if ( !(_la==RARITY || _la==QUOTERARITY) ) {
 			_errHandler.RecoverInline(this);
@@ -283,11 +284,11 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 73;
+			State = 77;
 			_la = _input.La(1);
 			if (_la==COMPAREOP) {
 				{
-				State = 72; Match(COMPAREOP);
+				State = 76; Match(COMPAREOP);
 				}
 			}
 
@@ -335,7 +336,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 75;
+			State = 79;
 			_la = _input.La(1);
 			if ( !(_la==SHOW || _la==HIDE) ) {
 			_errHandler.RecoverInline(this);
@@ -390,17 +391,17 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 77; strValue();
-			State = 81;
+			State = 81; strValue();
+			State = 85;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
 			while (_la==STR || _la==QUOTESTR) {
 				{
 				{
-				State = 78; strValue();
+				State = 82; strValue();
 				}
 				}
-				State = 83;
+				State = 87;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			}
@@ -450,17 +451,17 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 84; Match(DIGITS);
-			State = 88;
+			State = 88; Match(DIGITS);
+			State = 92;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
 			while (_la==DIGITS) {
 				{
 				{
-				State = 85; Match(DIGITS);
+				State = 89; Match(DIGITS);
 				}
 				}
-				State = 90;
+				State = 94;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			}
@@ -512,17 +513,17 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 91; rarityValue();
-			State = 95;
+			State = 95; rarityValue();
+			State = 99;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
 			while (_la==RARITY || _la==QUOTERARITY) {
 				{
 				{
-				State = 92; rarityValue();
+				State = 96; rarityValue();
 				}
 				}
-				State = 97;
+				State = 101;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			}
@@ -574,17 +575,17 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 98; socketValue();
-			State = 102;
+			State = 102; socketValue();
+			State = 106;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
 			while (_la==SOCKET || _la==QUOTESOCKET) {
 				{
 				{
-				State = 99; socketValue();
+				State = 103; socketValue();
 				}
 				}
-				State = 104;
+				State = 108;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			}
@@ -630,7 +631,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 105; Match(DIGITS);
+			State = 109; Match(DIGITS);
 			}
 		}
 		catch (RecognitionException re) {
@@ -673,7 +674,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 107; Match(DIGITS);
+			State = 111; Match(DIGITS);
 			}
 		}
 		catch (RecognitionException re) {
@@ -716,7 +717,7 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 109; Match(DIGITS);
+			State = 113; Match(DIGITS);
 			}
 		}
 		catch (RecognitionException re) {
@@ -760,11 +761,11 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 112;
+			State = 116;
 			_la = _input.La(1);
 			if (_la==DIGITS) {
 				{
-				State = 111; Match(DIGITS);
+				State = 115; Match(DIGITS);
 				}
 			}
 
@@ -821,10 +822,10 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 114; red();
-			State = 115; green();
-			State = 116; blue();
-			State = 117; alpha();
+			State = 118; red();
+			State = 119; green();
+			State = 120; blue();
+			State = 121; alpha();
 			}
 		}
 		catch (RecognitionException re) {
@@ -869,8 +870,8 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 119; Match(T__0);
-			State = 120; @params();
+			State = 123; Match(T__0);
+			State = 124; @params();
 			}
 		}
 		catch (RecognitionException re) {
@@ -915,8 +916,8 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 122; Match(T__1);
-			State = 123; @params();
+			State = 126; Match(T__1);
+			State = 127; @params();
 			}
 		}
 		catch (RecognitionException re) {
@@ -959,8 +960,8 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 125; Match(T__2);
-			State = 126; Match(DIGITS);
+			State = 129; Match(T__2);
+			State = 130; Match(DIGITS);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1005,8 +1006,8 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 128; Match(T__3);
-			State = 129; color();
+			State = 132; Match(T__3);
+			State = 133; color();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1051,8 +1052,8 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 131; Match(T__4);
-			State = 132; color();
+			State = 135; Match(T__4);
+			State = 136; color();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1097,8 +1098,102 @@ public partial class PoeFilterParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 134; Match(T__5);
-			State = 135; color();
+			State = 138; Match(T__5);
+			State = 139; color();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.ReportError(this, re);
+			_errHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class IdContext : ParserRuleContext {
+		public ITerminalNode DIGITS() { return GetToken(PoeFilterParser.DIGITS, 0); }
+		public IdContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_id; } }
+		public override void EnterRule(IParseTreeListener listener) {
+			IPoeFilterListener typedListener = listener as IPoeFilterListener;
+			if (typedListener != null) typedListener.EnterId(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IPoeFilterListener typedListener = listener as IPoeFilterListener;
+			if (typedListener != null) typedListener.ExitId(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IPoeFilterVisitor<TResult> typedVisitor = visitor as IPoeFilterVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitId(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public IdContext id() {
+		IdContext _localctx = new IdContext(_ctx, State);
+		EnterRule(_localctx, 40, RULE_id);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 141; Match(DIGITS);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.ReportError(this, re);
+			_errHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class VolumeContext : ParserRuleContext {
+		public ITerminalNode DIGITS() { return GetToken(PoeFilterParser.DIGITS, 0); }
+		public VolumeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_volume; } }
+		public override void EnterRule(IParseTreeListener listener) {
+			IPoeFilterListener typedListener = listener as IPoeFilterListener;
+			if (typedListener != null) typedListener.EnterVolume(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IPoeFilterListener typedListener = listener as IPoeFilterListener;
+			if (typedListener != null) typedListener.ExitVolume(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IPoeFilterVisitor<TResult> typedVisitor = visitor as IPoeFilterVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitVolume(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public VolumeContext volume() {
+		VolumeContext _localctx = new VolumeContext(_ctx, State);
+		EnterRule(_localctx, 42, RULE_volume);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 144;
+			_la = _input.La(1);
+			if (_la==DIGITS) {
+				{
+				State = 143; Match(DIGITS);
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -1113,9 +1208,11 @@ public partial class PoeFilterParser : Parser {
 	}
 
 	public partial class PoeAlertSoundContext : ParserRuleContext {
-		public ITerminalNode[] DIGITS() { return GetTokens(PoeFilterParser.DIGITS); }
-		public ITerminalNode DIGITS(int i) {
-			return GetToken(PoeFilterParser.DIGITS, i);
+		public IdContext id() {
+			return GetRuleContext<IdContext>(0);
+		}
+		public VolumeContext volume() {
+			return GetRuleContext<VolumeContext>(0);
 		}
 		public PoeAlertSoundContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1140,13 +1237,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeAlertSoundContext poeAlertSound() {
 		PoeAlertSoundContext _localctx = new PoeAlertSoundContext(_ctx, State);
-		EnterRule(_localctx, 40, RULE_poeAlertSound);
+		EnterRule(_localctx, 44, RULE_poeAlertSound);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 137; Match(T__6);
-			State = 138; Match(DIGITS);
-			State = 139; Match(DIGITS);
+			State = 146; Match(T__6);
+			State = 147; id();
+			State = 148; volume();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1190,13 +1287,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeRarityContext poeRarity() {
 		PoeRarityContext _localctx = new PoeRarityContext(_ctx, State);
-		EnterRule(_localctx, 42, RULE_poeRarity);
+		EnterRule(_localctx, 46, RULE_poeRarity);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 141; Match(T__7);
-			State = 142; compareOpNullable();
-			State = 143; rariryParams();
+			State = 150; Match(T__7);
+			State = 151; compareOpNullable();
+			State = 152; rariryParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1237,12 +1334,12 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeSocketGroupContext poeSocketGroup() {
 		PoeSocketGroupContext _localctx = new PoeSocketGroupContext(_ctx, State);
-		EnterRule(_localctx, 44, RULE_poeSocketGroup);
+		EnterRule(_localctx, 48, RULE_poeSocketGroup);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 145; Match(T__8);
-			State = 146; socketParams();
+			State = 154; Match(T__8);
+			State = 155; socketParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1286,13 +1383,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeLinkedSocketsContext poeLinkedSockets() {
 		PoeLinkedSocketsContext _localctx = new PoeLinkedSocketsContext(_ctx, State);
-		EnterRule(_localctx, 46, RULE_poeLinkedSockets);
+		EnterRule(_localctx, 50, RULE_poeLinkedSockets);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 148; Match(T__9);
-			State = 149; compareOpNullable();
-			State = 150; digitsParams();
+			State = 157; Match(T__9);
+			State = 158; compareOpNullable();
+			State = 159; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1336,13 +1433,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeSocketsContext poeSockets() {
 		PoeSocketsContext _localctx = new PoeSocketsContext(_ctx, State);
-		EnterRule(_localctx, 48, RULE_poeSockets);
+		EnterRule(_localctx, 52, RULE_poeSockets);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 152; Match(T__10);
-			State = 153; compareOpNullable();
-			State = 154; digitsParams();
+			State = 161; Match(T__10);
+			State = 162; compareOpNullable();
+			State = 163; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1386,13 +1483,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeItemLevelContext poeItemLevel() {
 		PoeItemLevelContext _localctx = new PoeItemLevelContext(_ctx, State);
-		EnterRule(_localctx, 50, RULE_poeItemLevel);
+		EnterRule(_localctx, 54, RULE_poeItemLevel);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 156; Match(T__11);
-			State = 157; compareOpNullable();
-			State = 158; digitsParams();
+			State = 165; Match(T__11);
+			State = 166; compareOpNullable();
+			State = 167; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1436,13 +1533,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeDropLevelContext poeDropLevel() {
 		PoeDropLevelContext _localctx = new PoeDropLevelContext(_ctx, State);
-		EnterRule(_localctx, 52, RULE_poeDropLevel);
+		EnterRule(_localctx, 56, RULE_poeDropLevel);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 160; Match(T__12);
-			State = 161; compareOpNullable();
-			State = 162; digitsParams();
+			State = 169; Match(T__12);
+			State = 170; compareOpNullable();
+			State = 171; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1486,13 +1583,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeQualityContext poeQuality() {
 		PoeQualityContext _localctx = new PoeQualityContext(_ctx, State);
-		EnterRule(_localctx, 54, RULE_poeQuality);
+		EnterRule(_localctx, 58, RULE_poeQuality);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 164; Match(T__13);
-			State = 165; compareOpNullable();
-			State = 166; digitsParams();
+			State = 173; Match(T__13);
+			State = 174; compareOpNullable();
+			State = 175; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1536,13 +1633,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeWidthContext poeWidth() {
 		PoeWidthContext _localctx = new PoeWidthContext(_ctx, State);
-		EnterRule(_localctx, 56, RULE_poeWidth);
+		EnterRule(_localctx, 60, RULE_poeWidth);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 168; Match(T__14);
-			State = 169; compareOpNullable();
-			State = 170; digitsParams();
+			State = 177; Match(T__14);
+			State = 178; compareOpNullable();
+			State = 179; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1586,13 +1683,13 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public PoeHeightContext poeHeight() {
 		PoeHeightContext _localctx = new PoeHeightContext(_ctx, State);
-		EnterRule(_localctx, 58, RULE_poeHeight);
+		EnterRule(_localctx, 62, RULE_poeHeight);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 172; Match(T__15);
-			State = 173; compareOpNullable();
-			State = 174; digitsParams();
+			State = 181; Match(T__15);
+			State = 182; compareOpNullable();
+			State = 183; digitsParams();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1678,104 +1775,104 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public StatementContext statement() {
 		StatementContext _localctx = new StatementContext(_ctx, State);
-		EnterRule(_localctx, 60, RULE_statement);
+		EnterRule(_localctx, 64, RULE_statement);
 		try {
-			State = 192;
+			State = 201;
 			switch (_input.La(1)) {
 			case T__0:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 176; poeClass();
+				State = 185; poeClass();
 				}
 				break;
 			case T__2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 177; poeFontSize();
+				State = 186; poeFontSize();
 				}
 				break;
 			case T__4:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 178; poeBackgroundColor();
+				State = 187; poeBackgroundColor();
 				}
 				break;
 			case T__5:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 179; poeBorderColor();
+				State = 188; poeBorderColor();
 				}
 				break;
 			case T__6:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 180; poeAlertSound();
+				State = 189; poeAlertSound();
 				}
 				break;
 			case T__8:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 181; poeSocketGroup();
+				State = 190; poeSocketGroup();
 				}
 				break;
 			case T__7:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 182; poeRarity();
+				State = 191; poeRarity();
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 183; poeSockets();
+				State = 192; poeSockets();
 				}
 				break;
 			case T__11:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 184; poeItemLevel();
+				State = 193; poeItemLevel();
 				}
 				break;
 			case T__12:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 185; poeDropLevel();
+				State = 194; poeDropLevel();
 				}
 				break;
 			case T__9:
 				EnterOuterAlt(_localctx, 11);
 				{
-				State = 186; poeLinkedSockets();
+				State = 195; poeLinkedSockets();
 				}
 				break;
 			case T__13:
 				EnterOuterAlt(_localctx, 12);
 				{
-				State = 187; poeQuality();
+				State = 196; poeQuality();
 				}
 				break;
 			case T__1:
 				EnterOuterAlt(_localctx, 13);
 				{
-				State = 188; poeBaseType();
+				State = 197; poeBaseType();
 				}
 				break;
 			case T__14:
 				EnterOuterAlt(_localctx, 14);
 				{
-				State = 189; poeWidth();
+				State = 198; poeWidth();
 				}
 				break;
 			case T__15:
 				EnterOuterAlt(_localctx, 15);
 				{
-				State = 190; poeHeight();
+				State = 199; poeHeight();
 				}
 				break;
 			case T__3:
 				EnterOuterAlt(_localctx, 16);
 				{
-				State = 191; poeTextColor();
+				State = 200; poeTextColor();
 				}
 				break;
 			default:
@@ -1826,26 +1923,26 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public BlockContext block() {
 		BlockContext _localctx = new BlockContext(_ctx, State);
-		EnterRule(_localctx, 62, RULE_block);
+		EnterRule(_localctx, 66, RULE_block);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 194; visibility();
-			State = 198;
+			State = 203; visibility();
+			State = 207;
 			_errHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(_input,7,_ctx);
+			_alt = Interpreter.AdaptivePredict(_input,8,_ctx);
 			while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					State = 195; statement();
+					State = 204; statement();
 					}
 					} 
 				}
-				State = 200;
+				State = 209;
 				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,7,_ctx);
+				_alt = Interpreter.AdaptivePredict(_input,8,_ctx);
 			}
 			}
 		}
@@ -1890,21 +1987,21 @@ public partial class PoeFilterParser : Parser {
 	[RuleVersion(0)]
 	public MainContext main() {
 		MainContext _localctx = new MainContext(_ctx, State);
-		EnterRule(_localctx, 64, RULE_main);
+		EnterRule(_localctx, 68, RULE_main);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 202;
+			State = 211;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
 			do {
 				{
 				{
-				State = 201; block();
+				State = 210; block();
 				}
 				}
-				State = 204;
+				State = 213;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			} while ( _la==SHOW || _la==HIDE );
@@ -1922,78 +2019,81 @@ public partial class PoeFilterParser : Parser {
 	}
 
 	public static readonly string _serializedATN =
-		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3\x1E\xD1\x4\x2\t"+
+		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3\x1E\xDA\x4\x2\t"+
 		"\x2\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x4\b\t\b\x4\t"+
 		"\t\t\x4\n\t\n\x4\v\t\v\x4\f\t\f\x4\r\t\r\x4\xE\t\xE\x4\xF\t\xF\x4\x10"+
 		"\t\x10\x4\x11\t\x11\x4\x12\t\x12\x4\x13\t\x13\x4\x14\t\x14\x4\x15\t\x15"+
 		"\x4\x16\t\x16\x4\x17\t\x17\x4\x18\t\x18\x4\x19\t\x19\x4\x1A\t\x1A\x4\x1B"+
 		"\t\x1B\x4\x1C\t\x1C\x4\x1D\t\x1D\x4\x1E\t\x1E\x4\x1F\t\x1F\x4 \t \x4!"+
-		"\t!\x4\"\t\"\x3\x2\x3\x2\x3\x3\x3\x3\x3\x4\x3\x4\x3\x5\x5\x5L\n\x5\x3"+
-		"\x6\x3\x6\x3\a\x3\a\a\aR\n\a\f\a\xE\aU\v\a\x3\b\x3\b\a\bY\n\b\f\b\xE\b"+
-		"\\\v\b\x3\t\x3\t\a\t`\n\t\f\t\xE\t\x63\v\t\x3\n\x3\n\a\ng\n\n\f\n\xE\n"+
-		"j\v\n\x3\v\x3\v\x3\f\x3\f\x3\r\x3\r\x3\xE\x5\xEs\n\xE\x3\xF\x3\xF\x3\xF"+
-		"\x3\xF\x3\xF\x3\x10\x3\x10\x3\x10\x3\x11\x3\x11\x3\x11\x3\x12\x3\x12\x3"+
-		"\x12\x3\x13\x3\x13\x3\x13\x3\x14\x3\x14\x3\x14\x3\x15\x3\x15\x3\x15\x3"+
-		"\x16\x3\x16\x3\x16\x3\x16\x3\x17\x3\x17\x3\x17\x3\x17\x3\x18\x3\x18\x3"+
-		"\x18\x3\x19\x3\x19\x3\x19\x3\x19\x3\x1A\x3\x1A\x3\x1A\x3\x1A\x3\x1B\x3"+
+		"\t!\x4\"\t\"\x4#\t#\x4$\t$\x3\x2\x3\x2\x3\x3\x3\x3\x3\x4\x3\x4\x3\x5\x5"+
+		"\x5P\n\x5\x3\x6\x3\x6\x3\a\x3\a\a\aV\n\a\f\a\xE\aY\v\a\x3\b\x3\b\a\b]"+
+		"\n\b\f\b\xE\b`\v\b\x3\t\x3\t\a\t\x64\n\t\f\t\xE\tg\v\t\x3\n\x3\n\a\nk"+
+		"\n\n\f\n\xE\nn\v\n\x3\v\x3\v\x3\f\x3\f\x3\r\x3\r\x3\xE\x5\xEw\n\xE\x3"+
+		"\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3\x10\x3\x10\x3\x10\x3\x11\x3\x11\x3\x11"+
+		"\x3\x12\x3\x12\x3\x12\x3\x13\x3\x13\x3\x13\x3\x14\x3\x14\x3\x14\x3\x15"+
+		"\x3\x15\x3\x15\x3\x16\x3\x16\x3\x17\x5\x17\x93\n\x17\x3\x18\x3\x18\x3"+
+		"\x18\x3\x18\x3\x19\x3\x19\x3\x19\x3\x19\x3\x1A\x3\x1A\x3\x1A\x3\x1B\x3"+
 		"\x1B\x3\x1B\x3\x1B\x3\x1C\x3\x1C\x3\x1C\x3\x1C\x3\x1D\x3\x1D\x3\x1D\x3"+
 		"\x1D\x3\x1E\x3\x1E\x3\x1E\x3\x1E\x3\x1F\x3\x1F\x3\x1F\x3\x1F\x3 \x3 \x3"+
-		" \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x3 \x5 \xC3\n \x3!\x3"+
-		"!\a!\xC7\n!\f!\xE!\xCA\v!\x3\"\x6\"\xCD\n\"\r\"\xE\"\xCE\x3\"\x3\xC8\x2"+
-		"\x2#\x2\x2\x4\x2\x6\x2\b\x2\n\x2\f\x2\xE\x2\x10\x2\x12\x2\x14\x2\x16\x2"+
-		"\x18\x2\x1A\x2\x1C\x2\x1E\x2 \x2\"\x2$\x2&\x2(\x2*\x2,\x2.\x2\x30\x2\x32"+
-		"\x2\x34\x2\x36\x2\x38\x2:\x2<\x2>\x2@\x2\x42\x2\x2\x6\x3\x2\x1D\x1E\x3"+
-		"\x2\x1A\x1B\x4\x2\x17\x17\x1C\x1C\x3\x2\x18\x19\xC6\x2\x44\x3\x2\x2\x2"+
-		"\x4\x46\x3\x2\x2\x2\x6H\x3\x2\x2\x2\bK\x3\x2\x2\x2\nM\x3\x2\x2\x2\fO\x3"+
-		"\x2\x2\x2\xEV\x3\x2\x2\x2\x10]\x3\x2\x2\x2\x12\x64\x3\x2\x2\x2\x14k\x3"+
-		"\x2\x2\x2\x16m\x3\x2\x2\x2\x18o\x3\x2\x2\x2\x1Ar\x3\x2\x2\x2\x1Ct\x3\x2"+
-		"\x2\x2\x1Ey\x3\x2\x2\x2 |\x3\x2\x2\x2\"\x7F\x3\x2\x2\x2$\x82\x3\x2\x2"+
-		"\x2&\x85\x3\x2\x2\x2(\x88\x3\x2\x2\x2*\x8B\x3\x2\x2\x2,\x8F\x3\x2\x2\x2"+
-		".\x93\x3\x2\x2\x2\x30\x96\x3\x2\x2\x2\x32\x9A\x3\x2\x2\x2\x34\x9E\x3\x2"+
-		"\x2\x2\x36\xA2\x3\x2\x2\x2\x38\xA6\x3\x2\x2\x2:\xAA\x3\x2\x2\x2<\xAE\x3"+
-		"\x2\x2\x2>\xC2\x3\x2\x2\x2@\xC4\x3\x2\x2\x2\x42\xCC\x3\x2\x2\x2\x44\x45"+
-		"\t\x2\x2\x2\x45\x3\x3\x2\x2\x2\x46G\t\x3\x2\x2G\x5\x3\x2\x2\x2HI\t\x4"+
-		"\x2\x2I\a\x3\x2\x2\x2JL\a\x16\x2\x2KJ\x3\x2\x2\x2KL\x3\x2\x2\x2L\t\x3"+
-		"\x2\x2\x2MN\t\x5\x2\x2N\v\x3\x2\x2\x2OS\x5\x2\x2\x2PR\x5\x2\x2\x2QP\x3"+
-		"\x2\x2\x2RU\x3\x2\x2\x2SQ\x3\x2\x2\x2ST\x3\x2\x2\x2T\r\x3\x2\x2\x2US\x3"+
-		"\x2\x2\x2VZ\a\x15\x2\x2WY\a\x15\x2\x2XW\x3\x2\x2\x2Y\\\x3\x2\x2\x2ZX\x3"+
-		"\x2\x2\x2Z[\x3\x2\x2\x2[\xF\x3\x2\x2\x2\\Z\x3\x2\x2\x2]\x61\x5\x6\x4\x2"+
-		"^`\x5\x6\x4\x2_^\x3\x2\x2\x2`\x63\x3\x2\x2\x2\x61_\x3\x2\x2\x2\x61\x62"+
-		"\x3\x2\x2\x2\x62\x11\x3\x2\x2\x2\x63\x61\x3\x2\x2\x2\x64h\x5\x4\x3\x2"+
-		"\x65g\x5\x4\x3\x2\x66\x65\x3\x2\x2\x2gj\x3\x2\x2\x2h\x66\x3\x2\x2\x2h"+
-		"i\x3\x2\x2\x2i\x13\x3\x2\x2\x2jh\x3\x2\x2\x2kl\a\x15\x2\x2l\x15\x3\x2"+
-		"\x2\x2mn\a\x15\x2\x2n\x17\x3\x2\x2\x2op\a\x15\x2\x2p\x19\x3\x2\x2\x2q"+
-		"s\a\x15\x2\x2rq\x3\x2\x2\x2rs\x3\x2\x2\x2s\x1B\x3\x2\x2\x2tu\x5\x14\v"+
-		"\x2uv\x5\x16\f\x2vw\x5\x18\r\x2wx\x5\x1A\xE\x2x\x1D\x3\x2\x2\x2yz\a\x3"+
-		"\x2\x2z{\x5\f\a\x2{\x1F\x3\x2\x2\x2|}\a\x4\x2\x2}~\x5\f\a\x2~!\x3\x2\x2"+
-		"\x2\x7F\x80\a\x5\x2\x2\x80\x81\a\x15\x2\x2\x81#\x3\x2\x2\x2\x82\x83\a"+
-		"\x6\x2\x2\x83\x84\x5\x1C\xF\x2\x84%\x3\x2\x2\x2\x85\x86\a\a\x2\x2\x86"+
-		"\x87\x5\x1C\xF\x2\x87\'\x3\x2\x2\x2\x88\x89\a\b\x2\x2\x89\x8A\x5\x1C\xF"+
-		"\x2\x8A)\x3\x2\x2\x2\x8B\x8C\a\t\x2\x2\x8C\x8D\a\x15\x2\x2\x8D\x8E\a\x15"+
-		"\x2\x2\x8E+\x3\x2\x2\x2\x8F\x90\a\n\x2\x2\x90\x91\x5\b\x5\x2\x91\x92\x5"+
-		"\x10\t\x2\x92-\x3\x2\x2\x2\x93\x94\a\v\x2\x2\x94\x95\x5\x12\n\x2\x95/"+
-		"\x3\x2\x2\x2\x96\x97\a\f\x2\x2\x97\x98\x5\b\x5\x2\x98\x99\x5\xE\b\x2\x99"+
-		"\x31\x3\x2\x2\x2\x9A\x9B\a\r\x2\x2\x9B\x9C\x5\b\x5\x2\x9C\x9D\x5\xE\b"+
-		"\x2\x9D\x33\x3\x2\x2\x2\x9E\x9F\a\xE\x2\x2\x9F\xA0\x5\b\x5\x2\xA0\xA1"+
-		"\x5\xE\b\x2\xA1\x35\x3\x2\x2\x2\xA2\xA3\a\xF\x2\x2\xA3\xA4\x5\b\x5\x2"+
-		"\xA4\xA5\x5\xE\b\x2\xA5\x37\x3\x2\x2\x2\xA6\xA7\a\x10\x2\x2\xA7\xA8\x5"+
-		"\b\x5\x2\xA8\xA9\x5\xE\b\x2\xA9\x39\x3\x2\x2\x2\xAA\xAB\a\x11\x2\x2\xAB"+
-		"\xAC\x5\b\x5\x2\xAC\xAD\x5\xE\b\x2\xAD;\x3\x2\x2\x2\xAE\xAF\a\x12\x2\x2"+
-		"\xAF\xB0\x5\b\x5\x2\xB0\xB1\x5\xE\b\x2\xB1=\x3\x2\x2\x2\xB2\xC3\x5\x1E"+
-		"\x10\x2\xB3\xC3\x5\"\x12\x2\xB4\xC3\x5&\x14\x2\xB5\xC3\x5(\x15\x2\xB6"+
-		"\xC3\x5*\x16\x2\xB7\xC3\x5.\x18\x2\xB8\xC3\x5,\x17\x2\xB9\xC3\x5\x32\x1A"+
-		"\x2\xBA\xC3\x5\x34\x1B\x2\xBB\xC3\x5\x36\x1C\x2\xBC\xC3\x5\x30\x19\x2"+
-		"\xBD\xC3\x5\x38\x1D\x2\xBE\xC3\x5 \x11\x2\xBF\xC3\x5:\x1E\x2\xC0\xC3\x5"+
-		"<\x1F\x2\xC1\xC3\x5$\x13\x2\xC2\xB2\x3\x2\x2\x2\xC2\xB3\x3\x2\x2\x2\xC2"+
-		"\xB4\x3\x2\x2\x2\xC2\xB5\x3\x2\x2\x2\xC2\xB6\x3\x2\x2\x2\xC2\xB7\x3\x2"+
-		"\x2\x2\xC2\xB8\x3\x2\x2\x2\xC2\xB9\x3\x2\x2\x2\xC2\xBA\x3\x2\x2\x2\xC2"+
-		"\xBB\x3\x2\x2\x2\xC2\xBC\x3\x2\x2\x2\xC2\xBD\x3\x2\x2\x2\xC2\xBE\x3\x2"+
-		"\x2\x2\xC2\xBF\x3\x2\x2\x2\xC2\xC0\x3\x2\x2\x2\xC2\xC1\x3\x2\x2\x2\xC3"+
-		"?\x3\x2\x2\x2\xC4\xC8\x5\n\x6\x2\xC5\xC7\x5> \x2\xC6\xC5\x3\x2\x2\x2\xC7"+
-		"\xCA\x3\x2\x2\x2\xC8\xC9\x3\x2\x2\x2\xC8\xC6\x3\x2\x2\x2\xC9\x41\x3\x2"+
-		"\x2\x2\xCA\xC8\x3\x2\x2\x2\xCB\xCD\x5@!\x2\xCC\xCB\x3\x2\x2\x2\xCD\xCE"+
-		"\x3\x2\x2\x2\xCE\xCC\x3\x2\x2\x2\xCE\xCF\x3\x2\x2\x2\xCF\x43\x3\x2\x2"+
-		"\x2\vKSZ\x61hr\xC2\xC8\xCE";
+		" \x3 \x3!\x3!\x3!\x3!\x3\"\x3\"\x3\"\x3\"\x3\"\x3\"\x3\"\x3\"\x3\"\x3"+
+		"\"\x3\"\x3\"\x3\"\x3\"\x3\"\x3\"\x5\"\xCC\n\"\x3#\x3#\a#\xD0\n#\f#\xE"+
+		"#\xD3\v#\x3$\x6$\xD6\n$\r$\xE$\xD7\x3$\x3\xD1\x2\x2%\x2\x2\x4\x2\x6\x2"+
+		"\b\x2\n\x2\f\x2\xE\x2\x10\x2\x12\x2\x14\x2\x16\x2\x18\x2\x1A\x2\x1C\x2"+
+		"\x1E\x2 \x2\"\x2$\x2&\x2(\x2*\x2,\x2.\x2\x30\x2\x32\x2\x34\x2\x36\x2\x38"+
+		"\x2:\x2<\x2>\x2@\x2\x42\x2\x44\x2\x46\x2\x2\x6\x3\x2\x1D\x1E\x3\x2\x1A"+
+		"\x1B\x4\x2\x17\x17\x1C\x1C\x3\x2\x18\x19\xCE\x2H\x3\x2\x2\x2\x4J\x3\x2"+
+		"\x2\x2\x6L\x3\x2\x2\x2\bO\x3\x2\x2\x2\nQ\x3\x2\x2\x2\fS\x3\x2\x2\x2\xE"+
+		"Z\x3\x2\x2\x2\x10\x61\x3\x2\x2\x2\x12h\x3\x2\x2\x2\x14o\x3\x2\x2\x2\x16"+
+		"q\x3\x2\x2\x2\x18s\x3\x2\x2\x2\x1Av\x3\x2\x2\x2\x1Cx\x3\x2\x2\x2\x1E}"+
+		"\x3\x2\x2\x2 \x80\x3\x2\x2\x2\"\x83\x3\x2\x2\x2$\x86\x3\x2\x2\x2&\x89"+
+		"\x3\x2\x2\x2(\x8C\x3\x2\x2\x2*\x8F\x3\x2\x2\x2,\x92\x3\x2\x2\x2.\x94\x3"+
+		"\x2\x2\x2\x30\x98\x3\x2\x2\x2\x32\x9C\x3\x2\x2\x2\x34\x9F\x3\x2\x2\x2"+
+		"\x36\xA3\x3\x2\x2\x2\x38\xA7\x3\x2\x2\x2:\xAB\x3\x2\x2\x2<\xAF\x3\x2\x2"+
+		"\x2>\xB3\x3\x2\x2\x2@\xB7\x3\x2\x2\x2\x42\xCB\x3\x2\x2\x2\x44\xCD\x3\x2"+
+		"\x2\x2\x46\xD5\x3\x2\x2\x2HI\t\x2\x2\x2I\x3\x3\x2\x2\x2JK\t\x3\x2\x2K"+
+		"\x5\x3\x2\x2\x2LM\t\x4\x2\x2M\a\x3\x2\x2\x2NP\a\x16\x2\x2ON\x3\x2\x2\x2"+
+		"OP\x3\x2\x2\x2P\t\x3\x2\x2\x2QR\t\x5\x2\x2R\v\x3\x2\x2\x2SW\x5\x2\x2\x2"+
+		"TV\x5\x2\x2\x2UT\x3\x2\x2\x2VY\x3\x2\x2\x2WU\x3\x2\x2\x2WX\x3\x2\x2\x2"+
+		"X\r\x3\x2\x2\x2YW\x3\x2\x2\x2Z^\a\x15\x2\x2[]\a\x15\x2\x2\\[\x3\x2\x2"+
+		"\x2]`\x3\x2\x2\x2^\\\x3\x2\x2\x2^_\x3\x2\x2\x2_\xF\x3\x2\x2\x2`^\x3\x2"+
+		"\x2\x2\x61\x65\x5\x6\x4\x2\x62\x64\x5\x6\x4\x2\x63\x62\x3\x2\x2\x2\x64"+
+		"g\x3\x2\x2\x2\x65\x63\x3\x2\x2\x2\x65\x66\x3\x2\x2\x2\x66\x11\x3\x2\x2"+
+		"\x2g\x65\x3\x2\x2\x2hl\x5\x4\x3\x2ik\x5\x4\x3\x2ji\x3\x2\x2\x2kn\x3\x2"+
+		"\x2\x2lj\x3\x2\x2\x2lm\x3\x2\x2\x2m\x13\x3\x2\x2\x2nl\x3\x2\x2\x2op\a"+
+		"\x15\x2\x2p\x15\x3\x2\x2\x2qr\a\x15\x2\x2r\x17\x3\x2\x2\x2st\a\x15\x2"+
+		"\x2t\x19\x3\x2\x2\x2uw\a\x15\x2\x2vu\x3\x2\x2\x2vw\x3\x2\x2\x2w\x1B\x3"+
+		"\x2\x2\x2xy\x5\x14\v\x2yz\x5\x16\f\x2z{\x5\x18\r\x2{|\x5\x1A\xE\x2|\x1D"+
+		"\x3\x2\x2\x2}~\a\x3\x2\x2~\x7F\x5\f\a\x2\x7F\x1F\x3\x2\x2\x2\x80\x81\a"+
+		"\x4\x2\x2\x81\x82\x5\f\a\x2\x82!\x3\x2\x2\x2\x83\x84\a\x5\x2\x2\x84\x85"+
+		"\a\x15\x2\x2\x85#\x3\x2\x2\x2\x86\x87\a\x6\x2\x2\x87\x88\x5\x1C\xF\x2"+
+		"\x88%\x3\x2\x2\x2\x89\x8A\a\a\x2\x2\x8A\x8B\x5\x1C\xF\x2\x8B\'\x3\x2\x2"+
+		"\x2\x8C\x8D\a\b\x2\x2\x8D\x8E\x5\x1C\xF\x2\x8E)\x3\x2\x2\x2\x8F\x90\a"+
+		"\x15\x2\x2\x90+\x3\x2\x2\x2\x91\x93\a\x15\x2\x2\x92\x91\x3\x2\x2\x2\x92"+
+		"\x93\x3\x2\x2\x2\x93-\x3\x2\x2\x2\x94\x95\a\t\x2\x2\x95\x96\x5*\x16\x2"+
+		"\x96\x97\x5,\x17\x2\x97/\x3\x2\x2\x2\x98\x99\a\n\x2\x2\x99\x9A\x5\b\x5"+
+		"\x2\x9A\x9B\x5\x10\t\x2\x9B\x31\x3\x2\x2\x2\x9C\x9D\a\v\x2\x2\x9D\x9E"+
+		"\x5\x12\n\x2\x9E\x33\x3\x2\x2\x2\x9F\xA0\a\f\x2\x2\xA0\xA1\x5\b\x5\x2"+
+		"\xA1\xA2\x5\xE\b\x2\xA2\x35\x3\x2\x2\x2\xA3\xA4\a\r\x2\x2\xA4\xA5\x5\b"+
+		"\x5\x2\xA5\xA6\x5\xE\b\x2\xA6\x37\x3\x2\x2\x2\xA7\xA8\a\xE\x2\x2\xA8\xA9"+
+		"\x5\b\x5\x2\xA9\xAA\x5\xE\b\x2\xAA\x39\x3\x2\x2\x2\xAB\xAC\a\xF\x2\x2"+
+		"\xAC\xAD\x5\b\x5\x2\xAD\xAE\x5\xE\b\x2\xAE;\x3\x2\x2\x2\xAF\xB0\a\x10"+
+		"\x2\x2\xB0\xB1\x5\b\x5\x2\xB1\xB2\x5\xE\b\x2\xB2=\x3\x2\x2\x2\xB3\xB4"+
+		"\a\x11\x2\x2\xB4\xB5\x5\b\x5\x2\xB5\xB6\x5\xE\b\x2\xB6?\x3\x2\x2\x2\xB7"+
+		"\xB8\a\x12\x2\x2\xB8\xB9\x5\b\x5\x2\xB9\xBA\x5\xE\b\x2\xBA\x41\x3\x2\x2"+
+		"\x2\xBB\xCC\x5\x1E\x10\x2\xBC\xCC\x5\"\x12\x2\xBD\xCC\x5&\x14\x2\xBE\xCC"+
+		"\x5(\x15\x2\xBF\xCC\x5.\x18\x2\xC0\xCC\x5\x32\x1A\x2\xC1\xCC\x5\x30\x19"+
+		"\x2\xC2\xCC\x5\x36\x1C\x2\xC3\xCC\x5\x38\x1D\x2\xC4\xCC\x5:\x1E\x2\xC5"+
+		"\xCC\x5\x34\x1B\x2\xC6\xCC\x5<\x1F\x2\xC7\xCC\x5 \x11\x2\xC8\xCC\x5> "+
+		"\x2\xC9\xCC\x5@!\x2\xCA\xCC\x5$\x13\x2\xCB\xBB\x3\x2\x2\x2\xCB\xBC\x3"+
+		"\x2\x2\x2\xCB\xBD\x3\x2\x2\x2\xCB\xBE\x3\x2\x2\x2\xCB\xBF\x3\x2\x2\x2"+
+		"\xCB\xC0\x3\x2\x2\x2\xCB\xC1\x3\x2\x2\x2\xCB\xC2\x3\x2\x2\x2\xCB\xC3\x3"+
+		"\x2\x2\x2\xCB\xC4\x3\x2\x2\x2\xCB\xC5\x3\x2\x2\x2\xCB\xC6\x3\x2\x2\x2"+
+		"\xCB\xC7\x3\x2\x2\x2\xCB\xC8\x3\x2\x2\x2\xCB\xC9\x3\x2\x2\x2\xCB\xCA\x3"+
+		"\x2\x2\x2\xCC\x43\x3\x2\x2\x2\xCD\xD1\x5\n\x6\x2\xCE\xD0\x5\x42\"\x2\xCF"+
+		"\xCE\x3\x2\x2\x2\xD0\xD3\x3\x2\x2\x2\xD1\xD2\x3\x2\x2\x2\xD1\xCF\x3\x2"+
+		"\x2\x2\xD2\x45\x3\x2\x2\x2\xD3\xD1\x3\x2\x2\x2\xD4\xD6\x5\x44#\x2\xD5"+
+		"\xD4\x3\x2\x2\x2\xD6\xD7\x3\x2\x2\x2\xD7\xD5\x3\x2\x2\x2\xD7\xD8\x3\x2"+
+		"\x2\x2\xD8G\x3\x2\x2\x2\fOW^\x65lv\x92\xCB\xD1\xD7";
 	public static readonly ATN _ATN =
 		new ATNDeserializer().Deserialize(_serializedATN.ToCharArray());
 }

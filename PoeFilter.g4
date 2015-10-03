@@ -53,7 +53,9 @@ poeFontSize: 'SetFontSize' DIGITS;
 poeTextColor: 'SetTextColor' color;
 poeBackgroundColor: 'SetBackgroundColor' color;
 poeBorderColor: 'SetBorderColor' color;
-poeAlertSound: 'PlayAlertSound' DIGITS DIGITS;
+id:DIGITS;
+volume:DIGITS?;
+poeAlertSound: 'PlayAlertSound' id volume;
 
 poeRarity: 'Rarity' compareOpNullable rariryParams;
 poeSocketGroup: 'SocketGroup' socketParams;

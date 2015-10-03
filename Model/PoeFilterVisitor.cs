@@ -157,6 +157,20 @@ public interface IPoeFilterVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitPoeBorderColor([NotNull] PoeFilterParser.PoeBorderColorContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.id"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitId([NotNull] PoeFilterParser.IdContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="PoeFilterParser.volume"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitVolume([NotNull] PoeFilterParser.VolumeContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="PoeFilterParser.poeAlertSound"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

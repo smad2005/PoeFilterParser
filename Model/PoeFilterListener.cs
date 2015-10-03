@@ -237,6 +237,28 @@ public interface IPoeFilterListener : IParseTreeListener {
 	void ExitPoeBorderColor([NotNull] PoeFilterParser.PoeBorderColorContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.id"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterId([NotNull] PoeFilterParser.IdContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.id"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitId([NotNull] PoeFilterParser.IdContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.volume"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterVolume([NotNull] PoeFilterParser.VolumeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.volume"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitVolume([NotNull] PoeFilterParser.VolumeContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.poeAlertSound"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

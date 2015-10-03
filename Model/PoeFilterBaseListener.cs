@@ -280,6 +280,32 @@ public partial class PoeFilterBaseListener : IPoeFilterListener {
 	public virtual void ExitPoeBorderColor([NotNull] PoeFilterParser.PoeBorderColorContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.id"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterId([NotNull] PoeFilterParser.IdContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.id"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitId([NotNull] PoeFilterParser.IdContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="PoeFilterParser.volume"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterVolume([NotNull] PoeFilterParser.VolumeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="PoeFilterParser.volume"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitVolume([NotNull] PoeFilterParser.VolumeContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="PoeFilterParser.poeAlertSound"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>

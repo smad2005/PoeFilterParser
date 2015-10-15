@@ -19,7 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 grammar PoeFilter;
 
-COMMENT: '#'.+?'\n' -> skip;
+COMMENT: '#'.+?('\n'|EOF) -> skip;
 WS:    [ \t\r\n] -> skip ;
 DIGITS: [0-9]+;
 COMPAREOP: '='| '<'|'>'|'<='|'>=';
@@ -29,7 +29,7 @@ HIDE: 'Hide';
 SOCKET: [RGBW]+ ;
 QUOTESOCKET:'"' SOCKET '"';
 QUOTERARITY:'"' RARITY '"';
-STR: .+? | ~[\r\n "]+;
+STR: .+? | ~[\r\n\t "]+;
 QUOTESTR:'"' STR '"';
 
 strValue: QUOTESTR | STR;

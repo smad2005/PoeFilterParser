@@ -14,7 +14,6 @@ namespace PoeFilterParser.NUnit.IntegrationTests
 		[TestCaseSource(nameof(FiltersList))]
 		public void Validate(string path)
 		{
-			//var path = "X:\\!POE\\PoeFilterParser\\Tests\\PoeFilterParser.NUnit.IntegrationTests\\Filters\\Full.filter";
 			using (var fileStream = new StreamReader(path))
 			{
 				var input = new AntlrInputStream(fileStream);

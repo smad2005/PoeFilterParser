@@ -24,6 +24,7 @@ WS:    [ \t\r\n] -> skip ;
 DIGITS: [0-9]+;
 COMPAREOP: '='| '<'|'>'|'<='|'>=';
 RARITY: 'Normal'| 'Magic'| 'Rare' | 'Unique';
+Boolean: 'True'|'False';
 SHOW: 'Show';
 HIDE: 'Hide';
 SOCKET: [RGBW]+ ;
@@ -66,6 +67,8 @@ poeDropLevel: 'DropLevel' compareOpNullable digitsParams;
 poeQuality: 'Quality' compareOpNullable digitsParams;
 poeWidth: 'Width' compareOpNullable digitsParams;
 poeHeight: 'Height' compareOpNullable digitsParams;
+poeCorrupted: 'Corrupted' Boolean;
+poeIdentified: 'Identified' Boolean;
 
 statement:  poeClass
          |  poeFontSize 
@@ -82,7 +85,10 @@ statement:  poeClass
          |  poeBaseType
          |  poeWidth
          |  poeHeight
+         |  poeCorrupted 
+         |  poeIdentified 
          |  poeTextColor;
+
 
 block: visibility statement*?;
 main: block+;

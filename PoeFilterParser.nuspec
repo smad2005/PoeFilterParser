@@ -17,7 +17,7 @@
           <dependency id="Antlr4.Runtime" version="4.5.3" />
 </dependencies>
   </metadata>
-<files>
+<!--<files>
         <file src="nuget\**" target="" />
- </files>
+ </files>-->
 </package>

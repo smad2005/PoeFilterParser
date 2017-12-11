@@ -90,7 +90,10 @@ statement:  poeClass
          |  poeHeight
          |  poeCorrupted 
          |  poeIdentified 
-         |  poeTextColor;
+         |  poeTextColor
+         |  poeElderItem
+         |  poeShaperItem 
+         |  poeShapedMap;
 
 
 block: visibility statement*?;

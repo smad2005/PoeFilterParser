@@ -12,3 +12,4 @@ LinkedSockets  0 1 3
 Sockets 0 1 3
 Corrupted True
 Identified False
+PlayAlertSound ShExalted 300

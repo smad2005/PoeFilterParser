@@ -72,6 +72,7 @@ poeIdentified: 'Identified' Boolean;
 poeElderItem: 'ElderItem' Boolean;
 poeShaperItem: 'ShaperItem' Boolean;
 poeShapedMap: 'ShapedMap' Boolean;
+poeElderMap: 'ElderMap' Boolean;
 
 statement:  poeClass
          |  poeFontSize 
@@ -93,7 +94,8 @@ statement:  poeClass
          |  poeTextColor
          |  poeElderItem
          |  poeShaperItem 
-         |  poeShapedMap;
+         |  poeShapedMap
+         |  poeElderMap;
 
 
 block: visibility statement*?;

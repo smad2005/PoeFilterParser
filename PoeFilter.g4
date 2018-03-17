@@ -73,6 +73,7 @@ poeElderItem: 'ElderItem' Boolean;
 poeShaperItem: 'ShaperItem' Boolean;
 poeShapedMap: 'ShapedMap' Boolean;
 poeElderMap: 'ElderMap' Boolean;
+poeDisableDropSound: 'DisableDropSound' Boolean;
 
 statement:  poeClass
          |  poeFontSize 
@@ -95,7 +96,8 @@ statement:  poeClass
          |  poeElderItem
          |  poeShaperItem 
          |  poeShapedMap
-         |  poeElderMap;
+         |  poeElderMap
+         |  poeDisableDropSound;
 
 
 block: visibility statement*?;

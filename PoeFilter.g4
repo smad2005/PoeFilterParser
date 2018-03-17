@@ -97,7 +97,7 @@ statement:  poeClass
          |  poeShaperItem 
          |  poeShapedMap
          |  poeElderMap
-		 |  poeDisableDropSound;
+         |  poeDisableDropSound;
 
 
 block: visibility statement*?;

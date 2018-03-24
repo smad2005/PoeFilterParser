@@ -19,7 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 grammar PoeFilter;
 
-COMMENT: '#'.+?('\n'|EOF) -> skip;
+COMMENT: '#'.*?('\n'|EOF) -> skip;
 WS:    [ \t\r\n] -> skip ;
 DIGITS: [0-9]+;
 COMPAREOP: '='| '<'|'>'|'<='|'>=';

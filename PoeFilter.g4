@@ -74,6 +74,9 @@ poeShaperItem: 'ShaperItem' Boolean;
 poeShapedMap: 'ShapedMap' Boolean;
 poeElderMap: 'ElderMap' Boolean;
 poeDisableDropSound: 'DisableDropSound' Boolean;
+poeGemLevel: 'GemLevel' compareOpNullable digitsParams;
+poeStackSize: 'StackSize' compareOpNullable digitsParams;
+poeHasExplicitMod: 'HasExplicitMod' params;
 
 statement:  poeClass
          |  poeFontSize 
@@ -97,8 +100,10 @@ statement:  poeClass
          |  poeShaperItem 
          |  poeShapedMap
          |  poeElderMap
-         |  poeDisableDropSound;
-
+         |  poeDisableDropSound
+         |  poeGemLevel
+         |  poeStackSize
+         |  poeHasExplicitMod;
 
 block: visibility statement*?;
 main: block+;

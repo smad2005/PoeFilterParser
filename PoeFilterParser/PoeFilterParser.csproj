@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RootNamespace>PoeFilterParser</RootNamespace>
+        <AssemblyName>PoeFilterParser</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Version>1.0.0</Version>
+        <title>PoeFilterParser</title>
+        <Authors>smad2005</Authors>
+        <PackageProjectUrl>https://github.com/smad2005/PoeFilterParser</PackageProjectUrl>
+        <PackageTags>Poe itemfilter parser antlr4 gplv3</PackageTags>
+        <Copyright>Copyright 2017-2018 smad2005</Copyright>
+        <Description>Item filter parser for poe</Description>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/smad2005/PoeFilterParser/master/LICENSE</PackageLicenseUrl>
+        <TargetFrameworks>net46;net471;netstandard2.0</TargetFrameworks>
+    </PropertyGroup>
+    <ItemGroup>
+        <Antlr4 Include="PoeFilter.g4">
+            <Generator>MSBuild:Compile</Generator>
+            <CustomToolNamespace>PoeFilterParser.Model</CustomToolNamespace>
+            <ForceAtn>True</ForceAtn>
+            <Listener>True</Listener>
+            <Visitor>True</Visitor>
+        </Antlr4>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Antlr4.CodeGenerator" Version="4.6.4" PrivateAssets="all" />
+        <PackageReference Include="Antlr4.Runtime" Version="4.6.4" />
+    </ItemGroup>
+</Project>

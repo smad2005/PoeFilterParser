@@ -33,8 +33,13 @@ namespace PoeFilterParser.NUnit.IntegrationTests
 
 		public static IEnumerable<TestCaseData> FiltersList()
 		{
-			var folder = Path.Combine(Path.GetDirectoryName(Path.GetDirectoryName(TestContext.CurrentContext.TestDirectory)), "filters");
-			return Directory.GetFiles(folder).Select(f=>new TestCaseData(f) {TestName = $"Validate_{Path.GetFileNameWithoutExtension(f)}_Success"});
+			var folder =
+				Path.Combine(
+					Path.GetDirectoryName(
+						Path.GetDirectoryName(Path.GetDirectoryName(TestContext.CurrentContext.TestDirectory))),
+					"filters");
+			return Directory.GetFiles(folder).Select(f => new TestCaseData(f)
+				{TestName = $"Validate_{Path.GetFileNameWithoutExtension(f)}_Success"});
 		}
 
 	}

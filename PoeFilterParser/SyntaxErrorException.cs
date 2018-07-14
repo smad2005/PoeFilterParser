@@ -29,7 +29,7 @@ namespace PoeFilterParser
             CharPositionInLine = charPositionInLine;
         }
 
-        public int Line { get; private set; }
-        public int CharPositionInLine { get; private set; }
+        public int Line { get; }
+        public int CharPositionInLine { get; }
     }
 }

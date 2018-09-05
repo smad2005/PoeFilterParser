@@ -32,10 +32,13 @@ QUOTESOCKET:'"' SOCKET '"';
 QUOTERARITY:'"' RARITY '"';
 STR: .+? | ~[\r\n\t "]+;
 QUOTESTR:'"' STR '"';
+TEMP: 'Temp';
 
 strValue: QUOTESTR | STR;
 socketValue: QUOTESOCKET | SOCKET;
 rarityValue: QUOTERARITY | RARITY;
+colorValue: 'Red' | 'Green' | 'Blue' | 'Brown' | 'White' | 'Yellow';
+shapeValue: 'Circle' | 'Diamond' | 'Hexagon' | 'Square' | 'Star' | 'Triangle';
 
 compareOpNullable:COMPAREOP?;
 visibility: SHOW | HIDE;
@@ -43,6 +46,8 @@ params:strValue (strValue)*;
 digitsParams: DIGITS (DIGITS)*;
 rariryParams: rarityValue (rarityValue)*;
 socketParams: socketValue (socketValue)*;
+iconParams: DIGITS colorValue shapeValue*;
+playEffectParams: colorValue (TEMP)*;
 red:DIGITS;
 green:DIGITS;
 blue:DIGITS;
@@ -77,6 +82,10 @@ poeDisableDropSound: 'DisableDropSound' Boolean;
 poeGemLevel: 'GemLevel' compareOpNullable digitsParams;
 poeStackSize: 'StackSize' compareOpNullable digitsParams;
 poeHasExplicitMod: 'HasExplicitMod' params;
+poeMapTier: 'MapTier' compareOpNullable digitsParams;
+poeCustomAlertSound: 'CustomAlertSound' params;
+poeMinimapIcon: 'MinimapIcon' iconParams;
+poePlayEffect: 'PlayEffect' playEffectParams;
 
 statement:  poeClass
          |  poeFontSize 
@@ -103,7 +112,12 @@ statement:  poeClass
          |  poeDisableDropSound
          |  poeGemLevel
          |  poeStackSize
-         |  poeHasExplicitMod;
+         |  poeHasExplicitMod
+		 |  poeMapTier
+		 |  poeCustomAlertSound
+		 |  poeMinimapIcon
+		 |  poePlayEffect;
+		 
 
 block: visibility statement*?;
 main: block+;

@@ -3357,7 +3357,7 @@ Show # $maps->T9
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 Neutral T2
 	PlayAlertSound 4 300                 # DROPSOUND:	 Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 Yellow Square
 	PlayEffect White
 
@@ -3367,7 +3367,7 @@ Show # %H4 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T8 - Maps
@@ -3380,7 +3380,7 @@ Show # $maps->T8
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 Neutral T2
 	PlayAlertSound 4 300                 # DROPSOUND:	 Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 Yellow Square
 	PlayEffect White
 
@@ -3390,7 +3390,7 @@ Show # %H4 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T7 - Maps
@@ -3403,7 +3403,7 @@ Show # $maps->T7
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 Neutral T2
 	PlayAlertSound 4 300                 # DROPSOUND:	 Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 Yellow Square
 	PlayEffect White
 
@@ -3413,7 +3413,7 @@ Show # %H4 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T6 - Maps
@@ -3426,7 +3426,7 @@ Show # $maps->T6
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 Neutral T2
 	PlayAlertSound 4 300                 # DROPSOUND:	 Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 Yellow Square
 	PlayEffect White
 
@@ -3436,7 +3436,7 @@ Show # %H4 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #   [1807] Low tier maps (T1-T5)
@@ -3449,7 +3449,7 @@ Show # $maps->T5
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 219         # BACKGROUND:	 Neutral T4
 	PlayAlertSound 4 300                 # DROPSOUND:	 Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Square
 	PlayEffect White Temp
 
@@ -3459,7 +3459,7 @@ Show # %H3 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T4 - Maps
@@ -3472,7 +3472,7 @@ Show # $maps->T4
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 219         # BACKGROUND:	 Neutral T4
 	PlayAlertSound 4 150                 # DROPSOUND:	 Low Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Square
 	PlayEffect White Temp
 
@@ -3482,7 +3482,7 @@ Show # %H3 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T3 - Maps
@@ -3495,7 +3495,7 @@ Show # $maps->T3
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 219         # BACKGROUND:	 Neutral T4
 	PlayAlertSound 4 150                 # DROPSOUND:	 Low Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Square
 	PlayEffect White Temp
 
@@ -3505,7 +3505,7 @@ Show # %H3 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T2 - Maps
@@ -3518,7 +3518,7 @@ Show # $maps->T2
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 219         # BACKGROUND:	 Neutral T4
 	PlayAlertSound 4 150                 # DROPSOUND:	 Low Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Square
 	PlayEffect White Temp
 
@@ -3528,7 +3528,7 @@ Show # %H3 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 #------------------------------------
 #  T1 - Maps
@@ -3541,7 +3541,7 @@ Show # $maps->T1
 	SetFontSize 45
 	SetBackgroundColor 0 0 0 219         # BACKGROUND:	 Neutral T4
 	PlayAlertSound 4 150                 # DROPSOUND:	 Low Map Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Square
 	PlayEffect White Temp
 
@@ -3551,7 +3551,7 @@ Show # %H3 $maps->outleveled
 	SetTextColor 150 150 150             # TEXTCOLOR:	 outleveled
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 0 0 0 185         # BACKGROUND:	 Neutral T3
-	DisableDropSound True
+	DisableDropSound
 
 # This should never happen. If you find pink maps, you probably deleted/commented sections above
 # or should update the filter. Alternatively use www.filterblade.xyz
@@ -3657,7 +3657,7 @@ Show # $Currency->High-T1 %TB-Currency-T1.5
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 240 90 35 255     # BACKGROUND:	 Currency T2
 	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 1 Yellow Circle
 	PlayEffect Yellow
 
@@ -3669,7 +3669,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 249 150 25 255    # BACKGROUND:	 Currency T3
 	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Circle
 	PlayEffect White
 
@@ -3681,7 +3681,7 @@ Show # $Currency->High-T3 %TB-Currency-T3
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Neutral T1.5
 	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 Currency T4
 	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Circle
 	PlayEffect White
 
@@ -3746,7 +3746,7 @@ Show # $Currency->High-T1 %TB-Currency-T1.5
 	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 T1 highlight
 	SetBackgroundColor 240 90 35 255     # BACKGROUND:	 Currency T2
 	PlayAlertSound 1 300                 # DROPSOUND:	 T1 Dropsound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 0 Red Circle
 	PlayEffect Red
 
@@ -3757,7 +3757,7 @@ Show # $Currency->High-T1 %TB-Currency-T1.5
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Neutral T1.5
 	SetBackgroundColor 213 159 0 255     # BACKGROUND:	 Currency T4
 	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 White Circle
 	PlayEffect White
 
@@ -3769,7 +3769,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Neutral T1
 	SetBackgroundColor 249 150 25 255    # BACKGROUND:	 Currency T3
 	PlayAlertSound 2 300                 # DROPSOUND:	 Currency Sound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 2 Yellow Circle
 	PlayEffect Yellow
 
@@ -3795,7 +3795,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 #	SetTextColor 155 210 135 255         # TEXTCOLOR:	 Net Color
 #	SetBorderColor 0 255 36 255          # BORDERCOLOR:	 Net Color 4
 #	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-#	DisableDropSound True
+#	DisableDropSound
 
 #Show #$Currency->Net->T2 %H3
 #	Class Currency
@@ -3804,7 +3804,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 #	SetTextColor 155 210 135 255         # TEXTCOLOR:	 Net Color
 #	SetBorderColor 0 120 16 255          # BORDERCOLOR:	 Net Color 3
 #	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-#	DisableDropSound True
+#	DisableDropSound
 
 #Show #$Currency->Net->T3 %H2
 #	Class Currency
@@ -3813,7 +3813,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 #	SetTextColor 155 210 135 255         # TEXTCOLOR:	 Net Color
 #	SetBorderColor 110 110 110 255       # BORDERCOLOR:	 Net Color 1
 #	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-#	DisableDropSound True
+#	DisableDropSound
 
 #Show #$Currency->Net->T4 %H2
 #	Class Currency
@@ -3822,7 +3822,7 @@ Show # $Currency->High-T2 %TB-Currency-T2
 #	SetTextColor 155 210 135 255         # TEXTCOLOR:	 Net Color
 #	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
 #	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
-#	DisableDropSound True
+#	DisableDropSound
 
 #------------------------------------
 #   [1906] Top Currency
@@ -3847,7 +3847,7 @@ Show # $Currency->Harbinger->Top %TB-Currency-T1-lower
 	SetBorderColor 255 255 255 255       # BORDERCOLOR:	 T1 highlight
 	SetBackgroundColor 240 90 35 255     # BACKGROUND:	 Currency T2
 	PlayAlertSound 1 300                 # DROPSOUND:	 T1 Dropsound
-	DisableDropSound True
+	DisableDropSound
 	MinimapIcon 0 Red Circle
 	PlayEffect Red
 

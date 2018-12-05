@@ -86,6 +86,7 @@ poeMapTier: 'MapTier' compareOpNullable digitsParams;
 poeCustomAlertSound: 'CustomAlertSound' params;
 poeMinimapIcon: 'MinimapIcon' iconParams;
 poePlayEffect: 'PlayEffect' playEffectParams;
+poeProphecy: 'Prophecy' params;
 
 statement:  poeClass
          |  poeFontSize 
@@ -116,7 +117,8 @@ statement:  poeClass
 		 |  poeMapTier
 		 |  poeCustomAlertSound
 		 |  poeMinimapIcon
-		 |  poePlayEffect;
+		 |  poePlayEffect
+		 |  poeProphecy;
 		 
 
 block: visibility statement*?;

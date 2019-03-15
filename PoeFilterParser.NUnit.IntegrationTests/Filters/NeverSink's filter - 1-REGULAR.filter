@@ -209,6 +209,39 @@
 # [[0100]] OVERRIDE AREA 1 - Override ALL rules here
 #===============================================================================================================
 
+# Testing new keywords here
+
+Show # HasEnchantment
+	HasEnchantment "Enchantment Tornado Shot Num Of Secondary Projectiles 2"
+	SetFontSize 45
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T0 Drop
+	MinimapIcon 0 Red Star
+	PlayEffect Red
+
+Show # AnyEnchantment
+	AnyEnchantment True
+	SetFontSize 36
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+
+Show # SynthesisedItem
+	SynthesisedItem True
+	SetFontSize 36
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+
+Show # FracturedItem
+	FracturedItem True
+	SetFontSize 36
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+
 #===============================================================================================================
 # [[0200]] 6 LINKS
 #===============================================================================================================

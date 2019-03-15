@@ -87,6 +87,10 @@ poeCustomAlertSound: 'CustomAlertSound' params;
 poeMinimapIcon: 'MinimapIcon' iconParams;
 poePlayEffect: 'PlayEffect' playEffectParams;
 poeProphecy: 'Prophecy' params;
+poeHasEnchantment: 'HasEnchantment' params;
+poeAnyEnchantment: 'AnyEnchantment' Boolean;
+poeSynthesisedItem: 'SynthesisedItem' Boolean;
+poeFracturedItem: 'FracturedItem ' Boolean;
 
 statement:  poeClass
          |  poeFontSize 
@@ -118,7 +122,11 @@ statement:  poeClass
 		 |  poeCustomAlertSound
 		 |  poeMinimapIcon
 		 |  poePlayEffect
-		 |  poeProphecy;
+		 |  poeProphecy
+		 |  poeHasEnchantment
+		 |  poeAnyEnchantment
+		 |  poeSynthesisedItem
+		 |  poeFracturedItem;
 		 
 
 block: visibility statement*?;

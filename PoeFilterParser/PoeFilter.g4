@@ -118,16 +118,15 @@ statement:  poeClass
          |  poeGemLevel
          |  poeStackSize
          |  poeHasExplicitMod
-		 |  poeMapTier
-		 |  poeCustomAlertSound
-		 |  poeMinimapIcon
-		 |  poePlayEffect
-		 |  poeProphecy
-		 |  poeHasEnchantment
-		 |  poeAnyEnchantment
-		 |  poeSynthesisedItem
-		 |  poeFracturedItem;
-		 
+	    	 |  poeMapTier
+	    	 |  poeCustomAlertSound
+	    	 |  poeMinimapIcon
+	    	 |  poePlayEffect
+	    	 |  poeProphecy
+	    	 |  poeHasEnchantment
+	    	 |  poeAnyEnchantment
+	    	 |  poeSynthesisedItem
+	    	 |  poeFracturedItem;
 
 block: visibility statement*?;
 main: block+;

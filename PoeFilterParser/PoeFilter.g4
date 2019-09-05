@@ -78,6 +78,7 @@ poeElderItem: 'ElderItem' Boolean;
 poeShaperItem: 'ShaperItem' Boolean;
 poeShapedMap: 'ShapedMap' Boolean;
 poeElderMap: 'ElderMap' Boolean;
+poeBlightedMap: 'BlightedMap' Boolean;
 poeDisableDropSound: 'DisableDropSound' Boolean?;
 poeGemLevel: 'GemLevel' compareOpNullable digitsParams;
 poeStackSize: 'StackSize' compareOpNullable digitsParams;
@@ -90,7 +91,7 @@ poeProphecy: 'Prophecy' params;
 poeHasEnchantment: 'HasEnchantment' params;
 poeAnyEnchantment: 'AnyEnchantment' Boolean;
 poeSynthesisedItem: 'SynthesisedItem' Boolean;
-poeFracturedItem: 'FracturedItem ' Boolean;
+poeFracturedItem: 'FracturedItem' Boolean;
 
 statement:  poeClass
          |  poeFontSize 
@@ -114,6 +115,7 @@ statement:  poeClass
          |  poeShaperItem 
          |  poeShapedMap
          |  poeElderMap
+         |  poeBlightedMap
          |  poeDisableDropSound
          |  poeGemLevel
          |  poeStackSize

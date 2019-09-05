@@ -219,6 +219,26 @@ Show # New filter features
 	MinimapIcon 0 Red Star
 	PlayEffect Red
 
+Show # New filter features BlightedMap
+	SetFontSize 45
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T0 Drop
+	MinimapIcon 0 Red Star
+	PlayEffect Red
+	BlightedMap True
+
+Show # New filter features BlightedMap
+	SetFontSize 45
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T0 Drop
+	MinimapIcon 0 Red Star
+	PlayEffect Red
+	BlightedMap False
+
 
 #===============================================================================================================
 # [[0200]] 6 LINKS

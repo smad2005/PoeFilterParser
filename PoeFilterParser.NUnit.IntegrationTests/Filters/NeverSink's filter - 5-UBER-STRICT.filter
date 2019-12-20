@@ -239,6 +239,16 @@ Show # New filter features BlightedMap
 	PlayEffect Red
 	BlightedMap False
 
+Show # New filter features HasInfluence
+	SetFontSize 45
+	SetTextColor 255 0 0 255             # TEXTCOLOR:	 T0 Item
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 T0 Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T0 Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T0 Drop
+	MinimapIcon 0 Red Star
+	PlayEffect Red
+	HasInfluence Elder Shaper
+
 
 #===============================================================================================================
 # [[0200]] 6 LINKS

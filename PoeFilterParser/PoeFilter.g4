@@ -62,6 +62,7 @@ poeBorderColor: 'SetBorderColor' color;
 soundId:DIGITS|'ShAlchemy'|'ShBlessed'|'ShChaos'|'ShDivine'|'ShExalted'|'ShFusing'|'ShGeneral'|'ShMirror'|'ShRegal'|'ShVaal';
 volume:DIGITS?;
 poeAlertSound: 'PlayAlertSound' soundId volume;
+poeHasInfluence: 'HasInfluence' params;
 
 poeRarity: 'Rarity' compareOpNullable rariryParams;
 poeSocketGroup: 'SocketGroup' socketParams;
@@ -128,7 +129,8 @@ statement:  poeClass
 	    	 |  poeHasEnchantment
 	    	 |  poeAnyEnchantment
 	    	 |  poeSynthesisedItem
-	    	 |  poeFracturedItem;
+	    	 |  poeFracturedItem
+			 |  poeHasInfluence;
 
 block: visibility statement*?;
 main: block+;

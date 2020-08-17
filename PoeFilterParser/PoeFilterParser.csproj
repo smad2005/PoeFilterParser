@@ -8,10 +8,10 @@
         <Authors>smad2005</Authors>
         <PackageProjectUrl>https://github.com/smad2005/PoeFilterParser</PackageProjectUrl>
         <PackageTags>Poe itemfilter parser antlr4 gplv3</PackageTags>
-        <Copyright>Copyright 2017-2018 smad2005</Copyright>
+        <Copyright>Copyright 2017-2020 smad2005</Copyright>
         <Description>Item filter parser for poe</Description>
         <PackageLicenseUrl>https://raw.githubusercontent.com/smad2005/PoeFilterParser/master/LICENSE</PackageLicenseUrl>
-        <TargetFrameworks>net46;net471;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net46;net472;net48;netstandard2.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <Antlr4 Include="PoeFilter.g4">
